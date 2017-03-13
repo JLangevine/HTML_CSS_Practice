@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+	<title>Word Shuffler</title>
+	<style type="text/css">
+		body{
+			background: linear-gradient(-90deg, orange,purple);
+			background-blend-mode: lighten;
+			text-align: center;
+			color: yellow;
+			font-family: "Lucida Console",Monaco,monospace;
+		}
+		h3{
+			text-decoration: underline !important;
+			text-decoration-color: darkgreen;
+			font-weight: bold;
+		}
+		h4{
+			color: purple;
+		}
+		#dont{
+			color: yellow;
+		}
+	</style>
+
+	<script>
+		function shuffle(){
+		var ran = Math.floor(Math.random()*7 + 1);
+		switch(ran){
+		case 1:
+			var word = "Joy";
+			break;
+		case 2:
+			var word = "Cheesecake";
+			break;
+		default:
+			var word = "affable";
+		}
+		document.getElementById("ran").innerHTML = ran;
+		document.getElementById("word").innerHTML = word;
+	}
+
+	function getWord(){
+		var number = document.getElementById("number").value;
+		//alert("Your number is "+number);
+		var new_word;
+		if(number > 0 && number <= 7){
+			switch(number){
+				case "3": new_word = "Tres-Leches";
+				break;
+
+				case "5": new_word = "Fifth";
+				break;
+
+				default: new_word = "Macaroni";
+			}
+		}
+		else{
+			alert ("Whoops! Your Number "+number+" is not in Range. Please try again.");
+			new_word = "";
+		}
+		document.getElementById("new_word").innerHTML = new_word;
+	}
+		
+	</script>
+</head>
+
+<body>
+	<h3>This webpage shuffles through an array of words. Enjoy!</h3>
+	<button onclick="shuffle()">SHUFFLE</button>
+	<h4>Your Random Number is: <h4 id="ran"></h4></h4>
+	<h4>Your Random Word is: <h4 id="word"></h4></h4><br>
+
+	<h4 id="dont">Don't Wanna Be Random?</h4><br>
+	Enter a Number Between 1 and 7: <input type="number" name="number" id="number">
+	<button onclick="getWord()">Get Word</button>
+	<h4>Your Non-Random Word is: <h4 id="new_word"></h4></h4>
+</body>
+
+<footer>
+	Jewel's Footer :) (c) 2017 Jewel Langevine <br>
+	Visit My Website. <a href="http://www.jlangevine.com">Click here!</a>
+</footer>
