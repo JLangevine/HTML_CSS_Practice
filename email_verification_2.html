@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+	<title>Verify Your Email!</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+			background-color: green;
+			color: orange;
+		}
+		h3{
+			text-decoration: underline;
+		}
+		footer{
+			color: black;
+		}
+	</style>
+
+	<script>
+	function Verify(){
+		var check = new RegExp("@");
+		var email = document.getElementById("email_address").value;
+		var result = check.test(email);
+		alert("We received your email. You entered: "+email);
+		if (result){
+			alert("Congrats! You've entered an email.");
+			document.getElementById("result").value = "Congrats!";
+		}
+		else {
+			alert("Whoops! That's not an email. Please try again.");
+			document.getElementById("result").value = "Whoops!";
+			$("#result").text("Whoops!");
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<h3>Is your email valid? Let's check!</h3>
+	<br><h3>Please enter your email address below:</h3>
+	Email: <input type="text" name="Email Address" id="email_address">
+	<input type="submit" name="submit_email_address" id="submit_email_address" onclick="return Verify()">
+	<button onclick="Verify()">Try me!</button>
+
+	<h3>Result: </h3><br>
+	<h4 id="result"></h4>
+
+</body>
+
+<br><br><footer>Jewel's Footer (c) Jewel HTML,CSS Practice 2017</footer>
