@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<title>Let's Build An Outfit!</title>
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+		function displayOutfit(){
+			//var top,bottom,other;
+			var selection = document.getElementById("pieces").value;
+
+			if (selection = "top_and_bottom"){
+				document.getElementById("show_outfit").innerHTML= "You Selected Top & Bottom";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Let's Build An Outfit for You!</h1>
+
+	<h2>Select The Type of Outfit You'd Like to Build</h2>
+	<select name="pieces" id="pieces">
+	  <option value="top_and_bottom">Top & Bottom</option>
+	  <option value="dress">Dress</option>
+	  <option value="suit">Suit</option>
+	  <option value="other">Other</option>
+	</select>
+	<input type="submit" name="submit_outfit_type_choice" id ="submit_outfit_type_choice" onclick="return displayOutfit()" value="Build My Outfit!">
+
+	<h3 id="show_outfit"></h3>
+</body>
+
+<br><br><footer>
+	Jewel's Footer (c) Jewel HTML,CSS Practice 2018 <br>
+	Visit My Website. <a href="http://www.jlangevine.com" target="_blank">Click here!</a> <br>
+	Follow Me on Instagram. <a href="https://www.instagram.com/jelacreates/" target="_blank">Click here!</a> <br>
+</footer>

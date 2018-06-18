@@ -30,11 +30,11 @@
 			alert("We received your email. You entered: "+email);
 		if (result){
 			alert("Congrats! You've entered an email.");
-			document.getElementById("result_text").value = "Congrats!";
+			document.getElementById("result_text").innerHTML = "Congrats! You can verify more email formats. Be sure to check the pop-up box for your results! :)";
 		}
 		else {
 			alert("Whoops! That's not a valid email format. Please try again.");
-			document.getElementById("result_text").value = "Whoops!";
+			document.getElementById("result_text").innerHTML = "Whoops! Try again and check the pop-up box for your results!";
 			$("#result").text("Whoops!");
 		}
 	}
