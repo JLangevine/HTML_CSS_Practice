@@ -9,7 +9,10 @@
 			var selection = document.getElementById("pieces").value;
 
 			if (selection = "top_and_bottom"){
-				document.getElementById("show_outfit").innerHTML= "You Selected Top & Bottom";
+				document.getElementById("show_outfit").innerHTML="You Selected Top & Bottom";
+				document.getElementById("outfit_photos").src="images/lulus-shoes.png";
+				document.getElementById("photo_sources_div").style.display = "block";
+				document.getElementById("photo_sources").href="https://www.lulus.com/products/laura-nude-suede-ankle-strap-heels/372212.html";
 			}
 		}
 	</script>
@@ -28,6 +31,10 @@
 	<input type="submit" name="submit_outfit_type_choice" id ="submit_outfit_type_choice" onclick="return displayOutfit()" value="Build My Outfit!">
 
 	<h3 id="show_outfit"></h3>
+	<img id="outfit_photos"></img>
+	<div id=photo_sources_div hidden>
+	<a id="photo_sources" target="_blank">Click Here to View Source</a>
+	</div>
 </body>
 
 <br><br><footer>
