@@ -19,7 +19,7 @@ jobs:
     
     steps:
       # run tests!
-      -checkout
+      - checkout
     
       - run: echo "hello Jewel :)"
 
