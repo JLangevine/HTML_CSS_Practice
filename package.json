@@ -1,0 +1,30 @@
+{
+  "name": "web_dev_practice",
+  "version": "1.0.0",
+  "description": "Initialize Application",
+  "main": "displayTest.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "jsdom": "^11.11.0",
+    "mocha-jsdom": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JLangevine/Web_Dev_Practice.git"
+  },
+  "author": "Jewel Langevine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JLangevine/Web_Dev_Practice/issues"
+  },
+  "homepage": "https://github.com/JLangevine/Web_Dev_Practice#readme"
+}
