@@ -12,17 +12,17 @@ describe('DisplayText', function() {
   });
 
    it ('should update the html id "word" block', function(){
-    const dom = new JSDOM(`<!DOCTYPE html><head><script src="shuffle.js"> </script></head>
-<body>
-  <h4>Your Random Word is: <h4 id="word"></h4></h4><br>
+global.dom = new JSDOM('<!doctype html><html><body></body></html>');
+global.window = dom.window;
+global.document = dom.window.document;
+global.createElement = dom.window.document.createElement;
+global.getElementById = dom.window.document.getElementById;
 
-</body>`,{ runScripts: 'dangerously', resources: 'usable' });
-
-    var buttonToClick = dom.window.document.createElement("button");
-    buttonToClick.id = "btn1";
-    dom.window.document.getElementById("btn1").addEventListener("click", shuffle());
-    var testing = dom.window.document.getElementById("word").innerHTML;
-   	assert.equal(testing, !'', "The wordBlock was null");
+var h4 = dom.window.document.createElement('div');
+h4.id ="word";
+h4.innerHTML = "Hello World";
+dom.window.document.body.appendChild(h4);
+var result = dom.window.document.body.firstChild.innerHTML;
+assert.equal(result,'Hello World');
    });
-
 });
