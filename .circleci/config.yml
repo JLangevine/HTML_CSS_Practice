@@ -22,6 +22,8 @@ jobs:
     
       - run: echo "hello Jewel :)"
       
+      - run: brew install npm
+      
       - run:
           npm install mocha chai --save-dev
           
