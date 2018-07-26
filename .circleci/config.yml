@@ -18,10 +18,19 @@ jobs:
     working_directory: ~/repo
     
     steps:
-      # run tests!
       - checkout
     
       - run: echo "hello Jewel :)"
+      
+      - run:
+        name: node dependency installs
+        command: |
+        npm install mocha chai --save-dev
+        npm install -g mocha
+        npm i --save-dev mocha-jsdom
+        npm install jsdom
+      
+      - run: mocha
 
       - store_artifacts:
           path: test-reports
