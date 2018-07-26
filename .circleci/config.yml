@@ -36,9 +36,6 @@ jobs:
           
       - run:
           npm install --user -g mocha
-        
-      - run:
-          npm i --save-dev mocha-jsdom
       
       - run:
           npm install jsdom
