@@ -25,10 +25,10 @@ jobs:
       - run:
         name: node dependency installs
         command: |
-        npm install mocha chai --save-dev
-        npm install -g mocha
-        npm i --save-dev mocha-jsdom
-        npm install jsdom
+          npm install mocha chai --save-dev
+          npm install -g mocha
+          npm i --save-dev mocha-jsdom
+          npm install jsdom
       
       - run: mocha
 
