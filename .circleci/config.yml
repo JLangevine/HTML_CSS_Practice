@@ -23,13 +23,17 @@ jobs:
       - run: echo "hello Jewel :)"
       
       - run:
-        name: node dependency installs
-        command: |
           npm install mocha chai --save-dev
+          
+      - run:
           npm install -g mocha
+        
+      - run:
           npm i --save-dev mocha-jsdom
-          npm install jsdom
       
+      - run:
+          npm install jsdom
+          
       - run: mocha
 
       - store_artifacts:
