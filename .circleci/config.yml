@@ -40,7 +40,8 @@ jobs:
       - run:
           npm install jsdom
           
-      - run: mocha
+      - run: 
+          npm test
 
       - store_artifacts:
           path: test-reports
