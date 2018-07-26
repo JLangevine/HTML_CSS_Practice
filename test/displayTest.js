@@ -18,11 +18,40 @@ global.document = dom.window.document;
 global.createElement = dom.window.document.createElement;
 global.getElementById = dom.window.document.getElementById;
 
-var h4 = dom.window.document.createElement('div');
+var h4 = dom.window.document.createElement('h4');
 h4.id ="word";
 h4.innerHTML = "Hello World";
 dom.window.document.body.appendChild(h4);
 var result = dom.window.document.body.firstChild.innerHTML;
 assert.equal(result,'Hello World');
    });
+
+
+it ('should change the html "word" block', function(){
+global.dom = new JSDOM('<!doctype html><html><body></body></html>');
+global.window = dom.window;
+global.document = dom.window.document;
+global.createElement = dom.window.document.createElement;
+global.getElementById = dom.window.document.getElementById;
+
+var h4 = dom.window.document.createElement('h4');
+h4.id ="word";
+h4.innerHTML = "Hello World";
+dom.window.document.body.appendChild(h4);
+var buttonToClick = dom.window.document.createElement("button");
+buttonToClick.id = "myButton";
+//buttonToClick.setAttribute ('onclick',"dom.window.document.body.firstChild.innerHTML = "Changed";");
+
+dom.window.document.body.appendChild(buttonToClick);
+
+dom.window.document.body.children[1].addEventListener("click", function(){
+    dom.window.document.body.firstChild.innerHTML = "Changed";
+},true);
+
+dom.window.document.body.children[1].click();
+
+var result = dom.window.document.body.firstChild.innerHTML;
+assert.equal(result,'Changed');
+   });
 });
+
