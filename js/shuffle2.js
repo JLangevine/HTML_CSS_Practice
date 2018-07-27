@@ -1,6 +1,6 @@
 function shuffle2(){
 		var word = "Changed";
-		document.getElementById("word").innerHTML = word;
+		this.document.getElementById("word").innerHTML = word;
 		//document.body.firstChild.innerHTML = word;
 	};
 

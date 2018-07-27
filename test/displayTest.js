@@ -80,5 +80,5 @@ assert.equal(result,'Changed');
    });
 });
 
-var shuffle2 = require('../shuffle2');
+var shuffle2 = require('../js/shuffle2');
 
